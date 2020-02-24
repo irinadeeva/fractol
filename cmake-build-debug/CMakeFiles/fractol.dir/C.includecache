@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bhugo/Documents/GitHub/fractol/fractol.c
+fractol.h
+/Users/bhugo/Documents/GitHub/fractol/fractol.h
+
+/Users/bhugo/Documents/GitHub/fractol/fractol.h
+mlx/mlx.h
+/Users/bhugo/Documents/GitHub/fractol/mlx/mlx.h
+math.h
+-
+libft/libft.h
+/Users/bhugo/Documents/GitHub/fractol/libft/libft.h
+
+/Users/bhugo/Documents/GitHub/fractol/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+stdio.h
+-
+
+/Users/bhugo/Documents/GitHub/fractol/mlx/mlx.h
+
