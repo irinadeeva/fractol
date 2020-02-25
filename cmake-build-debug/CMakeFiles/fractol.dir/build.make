@@ -915,9 +915,87 @@ CMakeFiles/fractol.dir/libft/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/libft/get_next_line.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bhugo/Documents/GitHub/fractol/libft/get_next_line.c -o CMakeFiles/fractol.dir/libft/get_next_line.c.s
 
+CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o: ../mlx/mlx_shaders.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o   -c /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_shaders.c
+
+CMakeFiles/fractol.dir/mlx/mlx_shaders.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/mlx/mlx_shaders.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_shaders.c > CMakeFiles/fractol.dir/mlx/mlx_shaders.c.i
+
+CMakeFiles/fractol.dir/mlx/mlx_shaders.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/mlx/mlx_shaders.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_shaders.c -o CMakeFiles/fractol.dir/mlx/mlx_shaders.c.s
+
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o: ../mlx/mlx_new_window.m
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o   -c /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.m
+
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/mlx/mlx_new_window.m.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.m > CMakeFiles/fractol.dir/mlx/mlx_new_window.m.i
+
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/mlx/mlx_new_window.m.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.m -o CMakeFiles/fractol.dir/mlx/mlx_new_window.m.s
+
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o: ../mlx/mlx_init_loop.m
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o   -c /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_init_loop.m
+
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_init_loop.m > CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.i
+
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_init_loop.m -o CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.s
+
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o: ../mlx/mlx_new_image.m
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o   -c /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_image.m
+
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/mlx/mlx_new_image.m.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_image.m > CMakeFiles/fractol.dir/mlx/mlx_new_image.m.i
+
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/mlx/mlx_new_image.m.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_image.m -o CMakeFiles/fractol.dir/mlx/mlx_new_image.m.s
+
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o: ../mlx/mlx_xpm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o   -c /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_xpm.c
+
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/mlx/mlx_xpm.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_xpm.c > CMakeFiles/fractol.dir/mlx/mlx_xpm.c.i
+
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/mlx/mlx_xpm.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_xpm.c -o CMakeFiles/fractol.dir/mlx/mlx_xpm.c.s
+
+CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o: ../mlx/mlx_int_str_to_wordtab.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o   -c /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int_str_to_wordtab.c
+
+CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int_str_to_wordtab.c > CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.i
+
+CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int_str_to_wordtab.c -o CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.s
+
 CMakeFiles/fractol.dir/fractol.c.o: CMakeFiles/fractol.dir/flags.make
 CMakeFiles/fractol.dir/fractol.c.o: ../fractol.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/fractol.dir/fractol.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/fractol.dir/fractol.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/fractol.c.o   -c /Users/bhugo/Documents/GitHub/fractol/fractol.c
 
 CMakeFiles/fractol.dir/fractol.c.i: cmake_force
@@ -996,6 +1074,12 @@ fractol_OBJECTS = \
 "CMakeFiles/fractol.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/fractol.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/fractol.dir/libft/get_next_line.c.o" \
+"CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o" \
+"CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o" \
+"CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o" \
+"CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o" \
+"CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o" \
+"CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o" \
 "CMakeFiles/fractol.dir/fractol.c.o"
 
 # External object files for target fractol
@@ -1067,11 +1151,17 @@ fractol: CMakeFiles/fractol.dir/libft/ft_strtrim.c.o
 fractol: CMakeFiles/fractol.dir/libft/ft_tolower.c.o
 fractol: CMakeFiles/fractol.dir/libft/ft_toupper.c.o
 fractol: CMakeFiles/fractol.dir/libft/get_next_line.c.o
+fractol: CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o
+fractol: CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o
+fractol: CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o
+fractol: CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o
+fractol: CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o
+fractol: CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o
 fractol: CMakeFiles/fractol.dir/fractol.c.o
 fractol: CMakeFiles/fractol.dir/build.make
 fractol: ../mlx/libmlx.a
 fractol: CMakeFiles/fractol.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking C executable fractol"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Linking C executable fractol"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fractol.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

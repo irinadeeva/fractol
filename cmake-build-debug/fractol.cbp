@@ -293,6 +293,30 @@
 		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/libft/libft.h">
 			<Option target="fractol"/>
 		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx.h">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_init_loop.m">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int_str_to_wordtab.c">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_image.m">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.h">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.m">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_shaders.c">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_xpm.c">
+			<Option target="fractol"/>
+		</Unit>
 		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -1932,6 +1932,168 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
+mlx/mlx_init_loop.o: mlx/mlx_init_loop.m.o
+
+.PHONY : mlx/mlx_init_loop.o
+
+# target to build an object file
+mlx/mlx_init_loop.m.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o
+.PHONY : mlx/mlx_init_loop.m.o
+
+mlx/mlx_init_loop.i: mlx/mlx_init_loop.m.i
+
+.PHONY : mlx/mlx_init_loop.i
+
+# target to preprocess a source file
+mlx/mlx_init_loop.m.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.i
+.PHONY : mlx/mlx_init_loop.m.i
+
+mlx/mlx_init_loop.s: mlx/mlx_init_loop.m.s
+
+.PHONY : mlx/mlx_init_loop.s
+
+# target to generate assembly for a file
+mlx/mlx_init_loop.m.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.s
+.PHONY : mlx/mlx_init_loop.m.s
+
+mlx/mlx_int_str_to_wordtab.o: mlx/mlx_int_str_to_wordtab.c.o
+
+.PHONY : mlx/mlx_int_str_to_wordtab.o
+
+# target to build an object file
+mlx/mlx_int_str_to_wordtab.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o
+.PHONY : mlx/mlx_int_str_to_wordtab.c.o
+
+mlx/mlx_int_str_to_wordtab.i: mlx/mlx_int_str_to_wordtab.c.i
+
+.PHONY : mlx/mlx_int_str_to_wordtab.i
+
+# target to preprocess a source file
+mlx/mlx_int_str_to_wordtab.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.i
+.PHONY : mlx/mlx_int_str_to_wordtab.c.i
+
+mlx/mlx_int_str_to_wordtab.s: mlx/mlx_int_str_to_wordtab.c.s
+
+.PHONY : mlx/mlx_int_str_to_wordtab.s
+
+# target to generate assembly for a file
+mlx/mlx_int_str_to_wordtab.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.s
+.PHONY : mlx/mlx_int_str_to_wordtab.c.s
+
+mlx/mlx_new_image.o: mlx/mlx_new_image.m.o
+
+.PHONY : mlx/mlx_new_image.o
+
+# target to build an object file
+mlx/mlx_new_image.m.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o
+.PHONY : mlx/mlx_new_image.m.o
+
+mlx/mlx_new_image.i: mlx/mlx_new_image.m.i
+
+.PHONY : mlx/mlx_new_image.i
+
+# target to preprocess a source file
+mlx/mlx_new_image.m.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_new_image.m.i
+.PHONY : mlx/mlx_new_image.m.i
+
+mlx/mlx_new_image.s: mlx/mlx_new_image.m.s
+
+.PHONY : mlx/mlx_new_image.s
+
+# target to generate assembly for a file
+mlx/mlx_new_image.m.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_new_image.m.s
+.PHONY : mlx/mlx_new_image.m.s
+
+mlx/mlx_new_window.o: mlx/mlx_new_window.m.o
+
+.PHONY : mlx/mlx_new_window.o
+
+# target to build an object file
+mlx/mlx_new_window.m.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o
+.PHONY : mlx/mlx_new_window.m.o
+
+mlx/mlx_new_window.i: mlx/mlx_new_window.m.i
+
+.PHONY : mlx/mlx_new_window.i
+
+# target to preprocess a source file
+mlx/mlx_new_window.m.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_new_window.m.i
+.PHONY : mlx/mlx_new_window.m.i
+
+mlx/mlx_new_window.s: mlx/mlx_new_window.m.s
+
+.PHONY : mlx/mlx_new_window.s
+
+# target to generate assembly for a file
+mlx/mlx_new_window.m.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_new_window.m.s
+.PHONY : mlx/mlx_new_window.m.s
+
+mlx/mlx_shaders.o: mlx/mlx_shaders.c.o
+
+.PHONY : mlx/mlx_shaders.o
+
+# target to build an object file
+mlx/mlx_shaders.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o
+.PHONY : mlx/mlx_shaders.c.o
+
+mlx/mlx_shaders.i: mlx/mlx_shaders.c.i
+
+.PHONY : mlx/mlx_shaders.i
+
+# target to preprocess a source file
+mlx/mlx_shaders.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_shaders.c.i
+.PHONY : mlx/mlx_shaders.c.i
+
+mlx/mlx_shaders.s: mlx/mlx_shaders.c.s
+
+.PHONY : mlx/mlx_shaders.s
+
+# target to generate assembly for a file
+mlx/mlx_shaders.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_shaders.c.s
+.PHONY : mlx/mlx_shaders.c.s
+
+mlx/mlx_xpm.o: mlx/mlx_xpm.c.o
+
+.PHONY : mlx/mlx_xpm.o
+
+# target to build an object file
+mlx/mlx_xpm.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o
+.PHONY : mlx/mlx_xpm.c.o
+
+mlx/mlx_xpm.i: mlx/mlx_xpm.c.i
+
+.PHONY : mlx/mlx_xpm.i
+
+# target to preprocess a source file
+mlx/mlx_xpm.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_xpm.c.i
+.PHONY : mlx/mlx_xpm.c.i
+
+mlx/mlx_xpm.s: mlx/mlx_xpm.c.s
+
+.PHONY : mlx/mlx_xpm.s
+
+# target to generate assembly for a file
+mlx/mlx_xpm.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/mlx/mlx_xpm.c.s
+.PHONY : mlx/mlx_xpm.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2142,6 +2304,24 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
+	@echo "... mlx/mlx_init_loop.o"
+	@echo "... mlx/mlx_init_loop.i"
+	@echo "... mlx/mlx_init_loop.s"
+	@echo "... mlx/mlx_int_str_to_wordtab.o"
+	@echo "... mlx/mlx_int_str_to_wordtab.i"
+	@echo "... mlx/mlx_int_str_to_wordtab.s"
+	@echo "... mlx/mlx_new_image.o"
+	@echo "... mlx/mlx_new_image.i"
+	@echo "... mlx/mlx_new_image.s"
+	@echo "... mlx/mlx_new_window.o"
+	@echo "... mlx/mlx_new_window.i"
+	@echo "... mlx/mlx_new_window.s"
+	@echo "... mlx/mlx_shaders.o"
+	@echo "... mlx/mlx_shaders.i"
+	@echo "... mlx/mlx_shaders.s"
+	@echo "... mlx/mlx_xpm.o"
+	@echo "... mlx/mlx_xpm.i"
+	@echo "... mlx/mlx_xpm.s"
 .PHONY : help
 
 

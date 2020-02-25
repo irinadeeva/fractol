@@ -71,6 +71,12 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bhugo/Documents/GitHub/fractol/libft/ft_tolower.c" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/libft/ft_tolower.c.o"
   "/Users/bhugo/Documents/GitHub/fractol/libft/ft_toupper.c" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/libft/ft_toupper.c.o"
   "/Users/bhugo/Documents/GitHub/fractol/libft/get_next_line.c" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/libft/get_next_line.c.o"
+  "/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_init_loop.m" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o"
+  "/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int_str_to_wordtab.c" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o"
+  "/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_image.m" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o"
+  "/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.m" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o"
+  "/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_shaders.c" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o"
+  "/Users/bhugo/Documents/GitHub/fractol/mlx/mlx_xpm.c" "/Users/bhugo/Documents/GitHub/fractol/cmake-build-debug/CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

@@ -66,6 +66,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/fractol.dir/libft/ft_tolower.c.o"
   "CMakeFiles/fractol.dir/libft/ft_toupper.c.o"
   "CMakeFiles/fractol.dir/libft/get_next_line.c.o"
+  "CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o"
+  "CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o"
+  "CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o"
+  "CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o"
+  "CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o"
+  "CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o"
   "fractol"
   "fractol.pdb"
 )

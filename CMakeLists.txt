@@ -75,9 +75,16 @@ add_executable(fractol
         libft/ft_toupper.c
         libft/get_next_line.c
         libft/libft.h
+        mlx/mlx_shaders.c
+        mlx/mlx_new_window.m
+        mlx/mlx_init_loop.m
+        mlx/mlx_new_image.m
+        mlx/mlx_xpm.c
+        mlx/mlx_int_str_to_wordtab.c
+        mlx/mlx.h
         fractol.c
         fractol.h)
 
 target_link_libraries(fractol ~/Documents/GitHub/fractol/mlx/libmlx.a)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}   -lmlx -framework AppKit -framework OpenGL") # compiler flags.
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -lmlx -framework AppKit -framework OpenGL") # compiler flags.

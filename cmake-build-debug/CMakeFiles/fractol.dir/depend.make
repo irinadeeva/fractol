@@ -204,3 +204,25 @@ CMakeFiles/fractol.dir/libft/ft_toupper.c.o: ../libft/libft.h
 CMakeFiles/fractol.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
 CMakeFiles/fractol.dir/libft/get_next_line.c.o: ../libft/libft.h
 
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o: ../mlx/font.c
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o: ../mlx/mlx_init_loop.m
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o: ../mlx/mlx_int.h
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o: ../mlx/mlx_new_window.h
+
+CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o: ../mlx/mlx_int_str_to_wordtab.c
+
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o: ../mlx/mlx_int.h
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o: ../mlx/mlx_new_image.m
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o: ../mlx/mlx_new_window.h
+
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o: ../mlx/mlx_int.h
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o: ../mlx/mlx_new_window.h
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o: ../mlx/mlx_new_window.m
+
+CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o: ../mlx/mlx_int.h
+CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o: ../mlx/mlx_shaders.c
+
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o: ../mlx/mlx_int.h
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o: ../mlx/mlx_rgb.c
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o: ../mlx/mlx_xpm.c
+

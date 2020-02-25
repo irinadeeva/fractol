@@ -204,3 +204,25 @@ CMakeFiles/fractol.dir/libft/ft_toupper.c.o
 CMakeFiles/fractol.dir/libft/get_next_line.c.o
  /Users/bhugo/Documents/GitHub/fractol/libft/get_next_line.c
  /Users/bhugo/Documents/GitHub/fractol/libft/libft.h
+CMakeFiles/fractol.dir/mlx/mlx_init_loop.m.o
+ /Users/bhugo/Documents/GitHub/fractol/mlx/font.c
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_init_loop.m
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int.h
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.h
+CMakeFiles/fractol.dir/mlx/mlx_int_str_to_wordtab.c.o
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int_str_to_wordtab.c
+CMakeFiles/fractol.dir/mlx/mlx_new_image.m.o
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int.h
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_image.m
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.h
+CMakeFiles/fractol.dir/mlx/mlx_new_window.m.o
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int.h
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.h
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_new_window.m
+CMakeFiles/fractol.dir/mlx/mlx_shaders.c.o
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int.h
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_shaders.c
+CMakeFiles/fractol.dir/mlx/mlx_xpm.c.o
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_int.h
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_rgb.c
+ /Users/bhugo/Documents/GitHub/fractol/mlx/mlx_xpm.c
