@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fractol.dir/fractol.c.o"
+  "CMakeFiles/fractol.dir/key.c.o"
   "CMakeFiles/fractol.dir/libft/ft_atoi.c.o"
   "CMakeFiles/fractol.dir/libft/ft_atoi_base.c.o"
   "CMakeFiles/fractol.dir/libft/ft_bzero.c.o"

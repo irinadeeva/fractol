@@ -150,6 +150,33 @@ fractol.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fractol.c.s
 .PHONY : fractol.c.s
 
+key.o: key.c.o
+
+.PHONY : key.o
+
+# target to build an object file
+key.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/key.c.o
+.PHONY : key.c.o
+
+key.i: key.c.i
+
+.PHONY : key.i
+
+# target to preprocess a source file
+key.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/key.c.i
+.PHONY : key.c.i
+
+key.s: key.c.s
+
+.PHONY : key.s
+
+# target to generate assembly for a file
+key.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/key.c.s
+.PHONY : key.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -2106,6 +2133,9 @@ help:
 	@echo "... fractol.o"
 	@echo "... fractol.i"
 	@echo "... fractol.s"
+	@echo "... key.o"
+	@echo "... key.i"
+	@echo "... key.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

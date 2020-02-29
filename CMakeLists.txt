@@ -83,7 +83,7 @@ add_executable(fractol
         mlx/mlx_int_str_to_wordtab.c
         mlx/mlx.h
         fractol.c
-        fractol.h)
+        fractol.h key.c)
 
 target_link_libraries(fractol ~/Documents/GitHub/fractol/mlx/libmlx.a)
 

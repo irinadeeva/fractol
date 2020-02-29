@@ -9,13 +9,6 @@ void	error_out(void)
     exit(1);
 }
 
-int		key_hook(int keycode, t_fractol *data)
-{
-    if (keycode == BOARD_ESC)
-        exit(1);
-    return (0);
-}
-
 t_complex init_complex(double re, double im)
 {
     t_complex complex;
@@ -53,6 +46,10 @@ t_color	get_color(int iteration, int max_iteration)
     return (color);
 }
 
+// So how to generate such a beautiful fractal?
+// for every pixel, iterate znew = zold² + c on the complex plane until it leaves the circle around the origin with radius 2.
+// The number of iterations it the color of the pixel.
+
 int mandelbrot_function(t_complex c, int max_iteration)
 {
     int iteration;
@@ -71,25 +68,27 @@ int mandelbrot_function(t_complex c, int max_iteration)
 
 void    draw_fractol(t_fractol *data)
 {
-    int y;
-    int  x;
+    int y; //the y coordinate will be the imaginary part.
+    int  x; //  the x coordinate will represent the real part of its complex coordinates
     int iteration;
     t_complex min;   // borders of the image
     t_complex max;   // borders of the image
     t_complex factor;
-    t_complex c; //  the pixel at the lower right corner of the image has coordinates [ImageWidth-1, ImageHeight-1]
+    t_complex c; // for each pixel apply an iterated complex function, the pixel  at the lower right corner of the image has coordinates [ImageWidth-1, ImageHeight-1]
     int max_iteration;
     t_color		color;
 
-    min = init_complex(-2.0, -2.0);
-    max.re = 2.0;
-    max.im = min.im + (max.re - min.re) * SIZE_WIN / SIZE_WIN;
+//    min = init_complex(-10.0, -10.0);
+//    max.re = 10.0;
+//    max.im = min.im + (max.re - min.re) * SIZE_WIN / SIZE_WIN;
 
+    max  = data->max;
+    min = data->min;
     factor = init_complex(
-            (max.re - min.re) / (SIZE_WIN - 1),
-            (max.im - min.im) / (SIZE_WIN - 1));
+            ((max.re - min.re) * data->zoom) / (SIZE_WIN - 1),
+            ((max.im - min.im)  * data->zoom) / (SIZE_WIN - 1));
 
-    max_iteration = 10;
+    max_iteration = 100;
 
     y = 0;
 
@@ -123,19 +122,31 @@ int		main(int argc, char **argv)
 {
     int		end;
     t_fractol	*data;
+    pthread_t threads[NUM_THREADS];[NUM_THREADS];
 
     //if (argc != 2)
     //    error_out();
     if (!(data = (t_fractol *)malloc(sizeof(*data))))
         error_out();
+    //data = {0};
+    data->min = init_complex(-2, -2);
+    data->max.re = 2;
+    data->max.im = data->min.im + (data->max.re - data->min.re) * SIZE_WIN / SIZE_WIN;
+    data->i = 0.1;
+    data->zoom = 1;
     //data_init(data, argv);
     if ((data->mlx_ptr = mlx_init()) == NULL)
         error_out();
-    data->win_ptr = mlx_new_window(data->mlx_ptr, SIZE_WIN, SIZE_WIN, "FRACTOL");
-    data->img_ptr = mlx_new_image(data->mlx_ptr, SIZE_WIN, SIZE_WIN);
+    data->win_ptr = mlx_new_window(data->mlx_ptr, SIZE_WIN, SIZE_WIN, "FRACTOL"); // detect from NULL
+    data->img_ptr = mlx_new_image(data->mlx_ptr, SIZE_WIN, SIZE_WIN); // detect from NULL
     data->image_pix = mlx_get_data_addr(data->img_ptr, &data->bpp, &data->size_line, &end);
+
+
     draw_fractol(data);
     mlx_hook(data->win_ptr, 2, 0, key_hook, data);
+    mlx_hook(data->win_ptr, 5, 0, mouse_release_hook, data);
+    //mlx_hook(data->win_ptr, 4, 0, mouse_press_hook, v);
+    //mlx_hook(data->win_ptr, 6, 0, motion_hook, v);
     mlx_loop(data->mlx_ptr);
     return (0);
 }

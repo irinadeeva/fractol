@@ -92,6 +92,9 @@
 		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/fractol.h">
 			<Option target="fractol"/>
 		</Unit>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/key.c">
+			<Option target="fractol"/>
+		</Unit>
 		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/libft/ft_atoi.c">
 			<Option target="fractol"/>
 		</Unit>
