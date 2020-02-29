@@ -86,6 +86,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/draw_fractal.c">
+			<Option target="fractol"/>
+		</Unit>
 		<Unit filename="/Users/bhugo/Documents/GitHub/fractol/fractol.c">
 			<Option target="fractol"/>
 		</Unit>

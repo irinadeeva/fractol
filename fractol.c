@@ -66,49 +66,6 @@ int mandelbrot_function(t_complex c, int max_iteration)
     return(iteration);
 }
 
-void    draw_fractol(t_fractol *data)
-{
-    int y; //the y coordinate will be the imaginary part.
-    int  x; //  the x coordinate will represent the real part of its complex coordinates
-    int iteration;
-    t_complex min;   // borders of the image
-    t_complex max;   // borders of the image
-    t_complex factor;
-    t_complex c; // for each pixel apply an iterated complex function, the pixel  at the lower right corner of the image has coordinates [ImageWidth-1, ImageHeight-1]
-    int max_iteration;
-    t_color		color;
-
-//    min = init_complex(-10.0, -10.0);
-//    max.re = 10.0;
-//    max.im = min.im + (max.re - min.re) * SIZE_WIN / SIZE_WIN;
-
-    max  = data->max;
-    min = data->min;
-    factor = init_complex(
-            ((max.re - min.re) * data->zoom) / (SIZE_WIN - 1),
-            ((max.im - min.im)  * data->zoom) / (SIZE_WIN - 1));
-
-    max_iteration = 100;
-
-    y = 0;
-
-    while (y < (SIZE_WIN * data->bpp / 8))
-    {
-        c.im = max.im - y * factor.im;
-        x = 0;
-        while (x < (SIZE_WIN * data->bpp / 8))
-        {
-            c.re = min.re + x * factor.re;
-            iteration = mandelbrot_function(c, max_iteration);
-            color = get_color(iteration, max_iteration);
-            put_pixel(data, x, y, color);
-            x++;
-        }
-        y++;
-    }
-    mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img_ptr, 0, 0);
-}
-
 /*
 ** data_init  заполнение струкутуры входными данными
 ** mlx_init() создает соединение с графической системой
@@ -140,9 +97,8 @@ int		main(int argc, char **argv)
     data->win_ptr = mlx_new_window(data->mlx_ptr, SIZE_WIN, SIZE_WIN, "FRACTOL"); // detect from NULL
     data->img_ptr = mlx_new_image(data->mlx_ptr, SIZE_WIN, SIZE_WIN); // detect from NULL
     data->image_pix = mlx_get_data_addr(data->img_ptr, &data->bpp, &data->size_line, &end);
-
-
-    draw_fractol(data);
+    get_threads(data);
+    //draw_fractol(data);
     mlx_hook(data->win_ptr, 2, 0, key_hook, data);
     mlx_hook(data->win_ptr, 5, 0, mouse_release_hook, data);
     //mlx_hook(data->win_ptr, 4, 0, mouse_press_hook, v);

@@ -123,6 +123,33 @@ fractol/fast:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/build
 .PHONY : fractol/fast
 
+draw_fractal.o: draw_fractal.c.o
+
+.PHONY : draw_fractal.o
+
+# target to build an object file
+draw_fractal.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/draw_fractal.c.o
+.PHONY : draw_fractal.c.o
+
+draw_fractal.i: draw_fractal.c.i
+
+.PHONY : draw_fractal.i
+
+# target to preprocess a source file
+draw_fractal.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/draw_fractal.c.i
+.PHONY : draw_fractal.c.i
+
+draw_fractal.s: draw_fractal.c.s
+
+.PHONY : draw_fractal.s
+
+# target to generate assembly for a file
+draw_fractal.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/draw_fractal.c.s
+.PHONY : draw_fractal.c.s
+
 fractol.o: fractol.c.o
 
 .PHONY : fractol.o
@@ -2130,6 +2157,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fractol"
+	@echo "... draw_fractal.o"
+	@echo "... draw_fractal.i"
+	@echo "... draw_fractal.s"
 	@echo "... fractol.o"
 	@echo "... fractol.i"
 	@echo "... fractol.s"
