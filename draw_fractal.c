@@ -22,11 +22,10 @@ void    draw_fractol(t_fractol *data)
             ((max.re - min.re) * data->zoom) / (SIZE_WIN - 1),
             ((max.im - min.im)  * data->zoom) / (SIZE_WIN - 1));
 
-    max_iteration = 100;
+    max_iteration = 50;
 
-    y = 0;
-
-    while (y < (SIZE_WIN * data->bpp / 8))
+    y = data->start;
+    while (y < data->finish)
     {
         c.im = max.im - y * factor.im;
         x = 0;
@@ -40,7 +39,6 @@ void    draw_fractol(t_fractol *data)
         }
         y++;
     }
-    mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img_ptr, 0, 0);
 }
 
 void     get_threads(t_fractol *data)
@@ -48,14 +46,26 @@ void     get_threads(t_fractol *data)
     pthread_t threads[NUM_THREADS];
     t_fractol data2[NUM_THREADS];
     int  i;
+    int k;
 
     i = 0;
+    k = (SIZE_WIN * data->bpp / 8)/ NUM_THREADS;
+    printf("k %d\n", k);
     while (i < NUM_THREADS)
     {
         data2[i] = *data;
-
+        data2[i].start = i * k;
+        data2[i].finish = (i + 1) * k;
+        printf("start %d\n",data2[i].start);
+        printf("finish %d\n",data2[i].finish);
+        if (pthread_create(&threads[i], NULL, (void *(*)(void *)) draw_fractol, (void *) &data2[i]))
+            error_out();
+        i++;
     }
-
-
-
+    while (i-- > 0)
+    {
+        if (pthread_join(threads[i], NULL))
+            error_out();
+    }
+    mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img_ptr, 0, 0);
 }

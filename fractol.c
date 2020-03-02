@@ -18,7 +18,7 @@ t_complex init_complex(double re, double im)
     return (complex);
 }
 
-static void	put_pixel(t_fractol *data, int x, int y, t_color color)
+void	put_pixel(t_fractol *data, int x, int y, t_color color)
 {
     int	i;
 
@@ -79,7 +79,6 @@ int		main(int argc, char **argv)
 {
     int		end;
     t_fractol	*data;
-    pthread_t threads[NUM_THREADS];[NUM_THREADS];
 
     //if (argc != 2)
     //    error_out();
@@ -91,6 +90,11 @@ int		main(int argc, char **argv)
     data->max.im = data->min.im + (data->max.re - data->min.re) * SIZE_WIN / SIZE_WIN;
     data->i = 0.1;
     data->zoom = 1;
+    if (!(data->mouse = (t_mouse *)malloc(sizeof(*data->mouse))))
+        error_out();
+    data->mouse->button = 0;
+    data->mouse->x = 0;
+    data->mouse->y = 0;
     //data_init(data, argv);
     if ((data->mlx_ptr = mlx_init()) == NULL)
         error_out();
@@ -98,7 +102,6 @@ int		main(int argc, char **argv)
     data->img_ptr = mlx_new_image(data->mlx_ptr, SIZE_WIN, SIZE_WIN); // detect from NULL
     data->image_pix = mlx_get_data_addr(data->img_ptr, &data->bpp, &data->size_line, &end);
     get_threads(data);
-    //draw_fractol(data);
     mlx_hook(data->win_ptr, 2, 0, key_hook, data);
     mlx_hook(data->win_ptr, 5, 0, mouse_release_hook, data);
     //mlx_hook(data->win_ptr, 4, 0, mouse_press_hook, v);

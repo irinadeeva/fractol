@@ -6,11 +6,11 @@
 # include "libft/libft.h"
 #include <pthread.h>
 
-# define SIZE_WIN		1000
+# define SIZE_WIN		500
 # define BOARD_ESC		53
 # define BOARD_PLUS		    24
 # define BOARD_MINUS	27
-#define NUM_THREADS 10
+#define NUM_THREADS 8
 
 typedef	struct		s_color
 {
@@ -43,6 +43,9 @@ typedef struct	s_fractol
     t_complex max;
     double    i;
     t_mouse *mouse;
+    int     start;
+    int     finish;
+
 }				t_fractol;
 
 int		key_hook(int keycode, t_fractol *data);
@@ -53,8 +56,7 @@ void	error_out(void);
 t_complex init_complex(double re, double im);
 int mandelbrot_function(t_complex c, int max_iteration);
 t_color	get_color(int iteration, int max_iteration);
-static void	put_pixel(t_fractol *data, int x, int y, t_color color);
+void	put_pixel(t_fractol *data, int x, int y, t_color color);
 void     get_threads(t_fractol *data);
-
 
 #endif

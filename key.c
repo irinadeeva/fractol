@@ -26,11 +26,12 @@ int		mouse_release_hook(int button, int x, int y, t_fractol *data)
     mouse->x = x;
     mouse->y = y;
     data->mouse = mouse;
-    if (button == 1)
+    if (button == 1 || button == 4)
         data->zoom = data->zoom * 0.8;
-    if (button == 2)
+    if (button == 2 || button == 5)
         data->zoom = data->zoom * 1.2;
-    draw_fractol(data);
+    get_threads(data);
+    //draw_fractol(data);
     return (0);
 }
 
