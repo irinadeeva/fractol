@@ -240,6 +240,7 @@ void    draw_fractol(t_fractol *data)
         }
         y++;
     }
+    pthread_exit(NULL);
 }
 
 void     get_threads(t_fractol *data)
@@ -266,4 +267,6 @@ void     get_threads(t_fractol *data)
             error_out();
     }
     mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img_ptr, 0, 0);
+    if (SIZE_WIN == 1000)
+        menu(data);
 }

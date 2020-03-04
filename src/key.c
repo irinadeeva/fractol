@@ -8,9 +8,9 @@
 int		julia_motion(int x, int y, t_fractol *data)
 {
 
-        data->k = init_complex(
-                4 * ((double)x / SIZE_WIN - 0.5),
-                4 * ((double)(SIZE_WIN - y) / SIZE_WIN- 0.5));
+    data->k = init_complex(
+                4 * ((double)x / SIZE_WIN - 1),
+                4 * ((double)(SIZE_WIN - y) / SIZE_WIN - 1));
     get_threads(data);
     return (0);
 }
@@ -22,8 +22,6 @@ int     mouse_press(int button, int x,int y, t_fractol *data)
     t_complex factor;
     t_complex c;
 
-    if (data->type_fractal == 2)
-        julia_motion(x,y, data);
     if ( button == 4)
         data->zoom = 0.8;
     if ( button == 5)
@@ -74,9 +72,30 @@ int     mouse_press(int button, int x,int y, t_fractol *data)
 //    return (0);
 //}
 
+void    set_default(t_fractol *data)
+{
+    data->min = init_complex(-2, -2);
+    data->max.re = 2;
+    data->max.im = data->min.im + (data->max.re - data->min.re) * SIZE_WIN / SIZE_WIN;
+    data->zoom = 1;
+    data->max_iteration = 50; // Чем больше будет указанное число, тем точнее будет полученное изображение фрактала. И тем больше вычислительных задач ляжет на компьютер.
+    data->k = init_complex(-0.4, 0.6);
+}
+
+# define BROAD_SPACE 49
+
 int		key_hook(int keycode, t_fractol *data)
 {
     if (keycode == BOARD_ESC)
         exit(1);
+    if (keycode == BROAD_SPACE)
+        set_default(data);
+    get_threads(data);
+    return (0);
+}
+
+int		exit_press(void)
+{
+    exit(1);
     return (0);
 }
