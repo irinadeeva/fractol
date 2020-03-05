@@ -9,8 +9,8 @@ int		julia_motion(int x, int y, t_fractol *data)
 {
 
     data->k = init_complex(
-                4 * ((double)x / SIZE_WIN - 1),
-                4 * ((double)(SIZE_WIN - y) / SIZE_WIN - 1));
+                4 * ((double)x / SIZE_WIN - 0.5),
+                4 * ((double)(SIZE_WIN - y) / SIZE_WIN - 0.5));
     get_threads(data);
     return (0);
 }
@@ -21,34 +21,28 @@ int     mouse_press(int button, int x,int y, t_fractol *data)
     t_complex max;   // borders of the image
     t_complex factor;
     t_complex c;
+    double zoom;
 
-    if ( button == 4)
-        data->zoom = 0.8;
-    if ( button == 5)
-        data->zoom = 1.2;
-    max  = data->max;
-    min = data->min;
-    factor = init_complex(
-            ((max.re - min.re) * data->zoom) / (SIZE_WIN - 1),
-            ((max.im - min.im)  * data->zoom) / (SIZE_WIN - 1));
-    c.im = max.im - y * factor.im;
-    c.re = min.re + x * factor.re;
-
-    data->min.re = (data->min.re - c.re) * (1.0 / data->zoom) + c.re;
-    data->min.im = (data->min.im - c.im) * (1.0 / data->zoom) + c.im;
-    data->max.re = (data->max.re - c.re)* (1.0 / data->zoom) + c.re;
-    data->max.im = data->min.im + (data->max.re - data->min.re) * SIZE_WIN / SIZE_WIN;
-
-    printf("%d\n", y);
-    printf("min.re %f\n", data->min.re);
-    printf("max.re %f\n", data->max.re);
-    printf("min.im %f\n", data->min.im);
-    printf("max.im %f\n", data->max.im);
-
-    get_threads(data);
-    return (0);
-
-
+     max = data->max;
+     min = data->min;
+     factor = init_complex(
+             (max.re - min.re) / (SIZE_WIN - 1),
+             (max.im - min.im) / (SIZE_WIN - 1));
+     c.im = max.im - y * factor.im;
+     c.re = min.re + x * factor.re;
+     if (button == 1 || button == 4)
+         zoom = 0.9f;
+     if (button == 2 || button == 5)
+         zoom = 1.1f;
+     data->zoom *=zoom;
+     if (data->zoom >=2)
+         return (0);
+     data->min.re = (min.re - c.re) * (zoom) + c.re;
+     data->min.im = (min.im - c.im) * (zoom) + c.im;
+     data->max.re = (max.re - c.re) * (zoom) + c.re;
+     data->max.im = data->min.im + (data->max.re - data->min.re) * SIZE_WIN / SIZE_WIN;
+     get_threads(data);
+     return (0);
 }
 
 
@@ -83,6 +77,10 @@ void    set_default(t_fractol *data)
 }
 
 # define BROAD_SPACE 49
+# define BOARD_PLUS		    24
+# define BOARD_MINUS		27
+# define PAD_PLUS		    69
+# define PAD_MINUS		    78
 
 int		key_hook(int keycode, t_fractol *data)
 {
@@ -90,6 +88,10 @@ int		key_hook(int keycode, t_fractol *data)
         exit(1);
     if (keycode == BROAD_SPACE)
         set_default(data);
+    if ((keycode == PAD_PLUS || keycode == BOARD_PLUS) && data->max_iteration < 150)
+        data->max_iteration += 10;
+    if ((keycode == PAD_MINUS || keycode == BOARD_MINUS) && data->max_iteration > 10)
+        data->max_iteration -= 10;
     get_threads(data);
     return (0);
 }

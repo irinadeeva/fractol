@@ -222,8 +222,8 @@ void    draw_fractol(t_fractol *data)
     max  = data->max;
     min = data->min;
     factor = init_complex(
-            ((max.re - min.re) * data->zoom) / (SIZE_WIN - 1),
-            ((max.im - min.im)  * data->zoom) / (SIZE_WIN - 1));
+            ((max.re - min.re) ) / (SIZE_WIN - 1),
+            ((max.im - min.im) ) / (SIZE_WIN - 1));
 
     y = data->start;
     while (y < data->finish)
@@ -240,7 +240,6 @@ void    draw_fractol(t_fractol *data)
         }
         y++;
     }
-    pthread_exit(NULL);
 }
 
 void     get_threads(t_fractol *data)

@@ -1,9 +1,9 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include "mlx/mlx.h"
+# include <mlx.h>
 # include <math.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 #include <pthread.h>
 
 # define SIZE_WIN		1000

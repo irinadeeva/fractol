@@ -28,5 +28,5 @@ void	menu(t_fractol *data)
     mlx_string_put(data->mlx_ptr, data->win_ptr, 15, 180, 0xFFFFFF, TEXT6);
     mlx_string_put(data->mlx_ptr, data->win_ptr, 15, 210, 0xFFFFFF, TEXT7);
     mlx_string_put(data->mlx_ptr, data->win_ptr, 15, 240, 0xFFFFFF, TEXT8);
-    mlx_string_put(data->mlx_ptr, data->win_ptr, 15, 270, 0xFFFFFF, TEXT9);
+    //mlx_string_put(data->mlx_ptr, data->win_ptr, 15, 270, 0xFFFFFF, TEXT9);
 }

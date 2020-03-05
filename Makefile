@@ -2,13 +2,13 @@
 NAME = fractol
 
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -O3
+FLAGS = -Wall -Werror -Wextra -Ofast
 
 SRC_D = ./src/
 SRC =	$(SRC_D)fractol.c \
 		$(SRC_D)menu.c \
 		$(SRC_D)key.c \
-		$(SRC_D)draw_fractol.c \
+		$(SRC_D)draw_fractal.c
 
 
 OBJ_D = ./obj/
@@ -25,7 +25,9 @@ INC =	-I$(INC_D) \
 		-I$(LIBFT_D) \
 		-I$(MLX_D)  
 
-LIB = $(LIBFT) $(MLX) -framework OpenGL -framework AppKit
+LIB = $(LIBFT) $(MLX) -framework OpenGL -framework AppKit -Ofast
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
@@ -33,14 +35,14 @@ $(NAME): $(MLX) $(LIBFT) $(OBJ)
 	$(CC) $(OBJ) $(LIB) -o $(NAME)
 
 $(MLX):
-	make -C $(MLX_D)
+	@make -C $(MLX_D)
 
 $(LIBFT):
-	make -C $(LIBFT_D)
+	@make -C $(LIBFT_D)
 
 $(OBJ_D)%.o : $(SRC_D)%.c
 	mkdir -p $(OBJ_D)
-	$(CC) $(FLAG) $(INC) -o $@ -c $<
+	$(CC) $(FLAGS) $(INC) -o $@ -c $<
 
 clean:
 	make -C $(LIBFT_D) clean

@@ -55,14 +55,13 @@ t_fractol  *init_data(int type_fractal)
     data->max.im = data->min.im + (data->max.re - data->min.re) * SIZE_WIN / SIZE_WIN;
     data->zoom = 1;
     data->type_fractal = type_fractal;
-    data->max_iteration = 50; // Чем больше будет указанное число, тем точнее будет полученное изображение фрактала. И тем больше вычислительных задач ляжет на компьютер.
+    data->max_iteration = 40; // Чем больше будет указанное число, тем точнее будет полученное изображение фрактала. И тем больше вычислительных задач ляжет на компьютер.
     data->k = init_complex(-0.4, 0.6);
     return (data);
 }
 
 void    start_fractal(int type_fractal)
 {
-    int		end;
     t_fractol	*data;
 
     data = init_data(type_fractal);
