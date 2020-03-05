@@ -11,6 +11,11 @@
 # define BOARD_PLUS		    24
 # define BOARD_MINUS	27
 #define NUM_THREADS 4
+# define ARROW_UP			126
+# define ARROW_DOWN			125
+# define ARROW_LEFT			123
+# define ARROW_RIGHT		124
+
 
 typedef	struct		s_color
 {
@@ -33,6 +38,7 @@ typedef struct	s_fractol
     int		    size_line;
     double      zoom;
     int         type_fractal;
+    int         type_color;
     int max_iteration;
     t_complex min;
     t_complex max;
@@ -47,7 +53,7 @@ int		    key_hook(int keycode, t_fractol *data);
 int		    mouse_release_hook(int button, int x, int y, t_fractol *data);
 int         mouse_press(int button, int x,int y, t_fractol *data);
 int         mouse_hook(int button, int x,int y, t_fractol *data);
-int		julia_motion(int x, int y, t_fractol *data);
+int		    julia_motion(int x, int y, t_fractol *data);
 void        draw_fractol(t_fractol *data);
 void	    error_out(void);
 t_complex   init_complex(double re, double im);
@@ -55,8 +61,9 @@ int         mandelbrot_function(t_complex c, int max_iteration);
 t_color	    get_color(int iteration, int max_iteration);
 void	    put_pixel(t_fractol *data, int x, int y, t_color color);
 void        get_threads(t_fractol *data);
-void	menu(t_fractol *data);
-t_fractol  *init_data(int type_fractal);
-int	exit_press(void);
+void	    menu(t_fractol *data);
+t_fractol   *init_data(int type_fractal);
+int	        exit_press(void);
+t_color choose_color(int iteration, int max_iteration, int type_color, t_complex c);
 
 #endif

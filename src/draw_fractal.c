@@ -29,18 +29,6 @@ void	put_pixel(t_fractol *data, int x, int y, t_color color)
 
 }
 
-t_color	get_color(int iteration, int max_iteration)
-{
-    t_color	color;
-    double	t;
-
-    t = (double)iteration / max_iteration;
-    color.channel[0] = 0;
-    color.channel[1] = (int8_t)(9 * (1 - t) * pow(t, 3) * 255);
-    color.channel[2] = (int8_t)(15 * pow((1 - t), 2) * pow(t, 2) * 255);
-    color.channel[3] = (int8_t)(8.5 * pow((1 - t), 3) * t * 255);
-    return (color);
-}
 
 // So how to generate such a beautiful fractal?
 // for every pixel, iterate znew = zold² + c on the complex plane until it leaves the circle around the origin with radius 2.
@@ -184,6 +172,29 @@ int perpendicular_mandelbrot_function(t_complex c, int max_iteration)
     return(iteration);
 }
 
+int newton_function(t_complex c, int max_iteration)
+{
+    int iteration;
+    t_complex z;
+    t_complex old;
+    double tmp;
+
+    z = init_complex(c.re, c.im);
+    iteration = 0;
+    tmp = 1.0;
+    while (tmp > 0.000001 && iteration < max_iteration)
+    {
+        old.re = z.re ;
+        old.im = z.im;
+        tmp = (z.re * z.re + z.im * z.im) * (z.re * z.re + z.im * z.im);
+        z.re  = (2 * z.re * tmp + z.re * z.re - z.im * z.im) / (3.0 * tmp);
+        z.im = (2 * z.im * (tmp - old.re)) / (3.0 * tmp);
+        tmp = (z.re  - old.re) * (z.re  - old.re) + (z.im - old.im) * (z.im - old.im);
+        iteration++;
+    }
+    return(iteration);
+}
+
 
 int choose_fractal(t_complex c, t_fractol *data)
 {
@@ -203,6 +214,8 @@ int choose_fractal(t_complex c, t_fractol *data)
         return(celtic_perpendicular_function(c, data->max_iteration));
     if (data->type_fractal == 8)
         return(perpendicular_mandelbrot_function(c, data->max_iteration));
+    if (data->type_fractal == 9)
+        return(newton_function(c, data->max_iteration));
     else
         return (0);
 }
@@ -234,7 +247,7 @@ void    draw_fractol(t_fractol *data)
         {
             c.re = min.re + x * factor.re;
             iteration = choose_fractal(c, data);
-            color = get_color(iteration, data->max_iteration);
+            color = choose_color(iteration, data->max_iteration, data->type_color, c);
             put_pixel(data, x, y, color);
             x++;
         }

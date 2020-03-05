@@ -18,7 +18,6 @@ void	error_out(void)
 ** mlx_loop() не дает закрыться окну
 */
 
-
 void    start_hooks(t_fractol *data)
 {
     mlx_hook(data->win_ptr, 2, 0, key_hook, data);
@@ -55,8 +54,9 @@ t_fractol  *init_data(int type_fractal)
     data->max.im = data->min.im + (data->max.re - data->min.re) * SIZE_WIN / SIZE_WIN;
     data->zoom = 1;
     data->type_fractal = type_fractal;
-    data->max_iteration = 40; // Чем больше будет указанное число, тем точнее будет полученное изображение фрактала. И тем больше вычислительных задач ляжет на компьютер.
+    data->max_iteration = 50; // Чем больше будет указанное число, тем точнее будет полученное изображение фрактала. И тем больше вычислительных задач ляжет на компьютер.
     data->k = init_complex(-0.4, 0.6);
+    data->type_color = 2;
     return (data);
 }
 
@@ -82,6 +82,7 @@ void    print_help()
            "      -6 the Celtic Mandelbar set \n"
            "      -7 the Celtic Perpendicular set \n"
            "      -8 the Perpendicular Mandelbrot set\n"
+           "      -9 the The Newton set\n"
            "\033[31mUsage: ./fractol <-number>\n");
 }
 
@@ -103,6 +104,8 @@ void type_of_fractal(char *s)
         start_fractal(7);
     if (ft_strcmp(s, "-8") == 0)
         start_fractal(8);
+    if (ft_strcmp(s, "-9") == 0)
+        start_fractal(9);
     else
         print_help();
 }

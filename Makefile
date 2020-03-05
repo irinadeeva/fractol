@@ -8,6 +8,7 @@ SRC_D = ./src/
 SRC =	$(SRC_D)fractol.c \
 		$(SRC_D)menu.c \
 		$(SRC_D)key.c \
+		$(SRC_D)color.c \
 		$(SRC_D)draw_fractal.c
 
 

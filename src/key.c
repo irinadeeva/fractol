@@ -74,6 +74,7 @@ void    set_default(t_fractol *data)
     data->zoom = 1;
     data->max_iteration = 50; // Чем больше будет указанное число, тем точнее будет полученное изображение фрактала. И тем больше вычислительных задач ляжет на компьютер.
     data->k = init_complex(-0.4, 0.6);
+    data->type_color = 2;
 }
 
 # define BROAD_SPACE 49
@@ -81,6 +82,9 @@ void    set_default(t_fractol *data)
 # define BOARD_MINUS		27
 # define PAD_PLUS		    69
 # define PAD_MINUS		    78
+
+# define BOARD_C			8
+# define BOARD_V			9
 
 int		key_hook(int keycode, t_fractol *data)
 {
@@ -92,6 +96,37 @@ int		key_hook(int keycode, t_fractol *data)
         data->max_iteration += 10;
     if ((keycode == PAD_MINUS || keycode == BOARD_MINUS) && data->max_iteration > 10)
         data->max_iteration -= 10;
+    if (keycode == ARROW_UP)
+    {
+        data->min.im -= 0.1;
+        data->max.im -= 0.1;
+    }
+    if (keycode == ARROW_DOWN)
+    {
+        data->min.im += 0.1;
+        data->max.im += 0.1;
+    }
+    if (keycode == ARROW_LEFT)
+    {
+        data->min.re += 0.1;
+        data->max.re += 0.1;
+    }
+    if (keycode == ARROW_RIGHT)
+   {
+        data->min.re -= 0.1;
+        data->max.re -= 0.1;
+    }
+    if (keycode == BOARD_C)
+    {
+        data->type_color == 9? data->type_color = 0 : 0;
+        data->type_color += 1;
+    }
+    if (keycode == BOARD_V)
+    {
+        data->type_fractal == 9? data->type_fractal = 0 : 0;
+        data->type_fractal += 1;
+    }
+
     get_threads(data);
     return (0);
 }
