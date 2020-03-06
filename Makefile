@@ -6,10 +6,16 @@ FLAGS = -Wall -Werror -Wextra -Ofast
 
 SRC_D = ./src/
 SRC =	$(SRC_D)fractol.c \
+		$(SRC_D)init_data.c \
 		$(SRC_D)menu.c \
-		$(SRC_D)key.c \
+		$(SRC_D)draw_fractal.c\
+		$(SRC_D)types_fractol.c \
+		$(SRC_D)types_fractol2.c \
 		$(SRC_D)color.c \
-		$(SRC_D)draw_fractal.c
+		$(SRC_D)bernstein_polynomials.c \
+		$(SRC_D)continuous_coloring.c \
+		$(SRC_D)key.c \
+		$(SRC_D)mouse.c 
 
 
 OBJ_D = ./obj/
@@ -46,13 +52,13 @@ $(OBJ_D)%.o : $(SRC_D)%.c
 	$(CC) $(FLAGS) $(INC) -o $@ -c $<
 
 clean:
-	make -C $(LIBFT_D) clean
-	make -C $(MLX_D) clean
+	@make -C $(LIBFT_D) clean
+	@make -C $(MLX_D) clean
 	/bin/rm -rf $(OBJ_D);
 
 fclean: clean
-	make -C $(LIBFT_D) fclean
-	make -C $(MLX_D) clean
+	@make -C $(LIBFT_D) fclean
+	@make -C $(MLX_D) clean
 	/bin/rm -rf $(NAME);
 
 re: fclean all

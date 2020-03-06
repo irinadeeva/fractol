@@ -12,8 +12,8 @@
 
 NSOpenGLPixelFormatAttribute pfa_attrs[] =
   {
-    NSOpenGLPFADepthSize, 32,
-    NSOpenGLPFAOpenGLProfile, NSOpenGLProfileVersionLegacy,
+	NSOpenGLPFADepthSize, 32,
+	NSOpenGLPFAOpenGLProfile, NSOpenGLProfileVersionLegacy,
     0
   };
 
